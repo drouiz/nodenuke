@@ -1,0 +1,15 @@
+  #BACKEND SERVER LINKAR MONGO Y A RABIT
+  node:
+    restart: always
+    build: ./node
+    ports:
+      - 3000:3000
+
+    environment:
+      NODE_ENV: development
+
+  php:
+    restart: always
+    build: ./php
+    ports:
+      - 3001:80
